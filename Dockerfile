@@ -22,7 +22,7 @@ RUN npm run build
 FROM httpd:alpine
 
 # Server path
-WORKDIR /var/www/html
+WORKDIR /usr/local/apache2/htdocs
 
 # Copy
 COPY --from=production /app/build .
